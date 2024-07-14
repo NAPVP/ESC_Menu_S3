@@ -1,0 +1,152 @@
+<N.S.S>
+	
+	<!-- Clickable Link -->
+	<InsertBefore xpath="/windows/window[@name='chatoutput']">
+
+
+	<window name="nastytop" controller="NewsScreen" anchor="CenterTop" pos="-300,-150" justify="center" disableautobackground="true">
+		
+		
+		<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >
+			
+			<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
+			<rect name="btnwebstore" depth="10" pos="385,0" width="650" height="300" enabled_font_color="[labelColor]" controller="NewsWindow">
+					
+				
+					<!-- Just adds a border behind the button -->
+					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="250" fillcenter="true" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />				
+						
+						<!-- Text You Want On The Button -->
+						<label name="btntext" pos="-387,-0" color="245,206,51,255" depth="99" height="150" width="650" font_size="80" justify="center" text="NASTY PvE #1" />
+						<label name="btntext" pos="-387,-80" color="[white]" depth="99" height="150" width="650" font_size="25" justify="center" text="Welcome to NASTY PvE 7days to die Serves!" />
+						<label name="btntext" pos="-387,-110" color="[white]" depth="99" height="150" width="650" font_size="25" justify="center" text="Optimized performance and low latency allowing you to connect any NASTY PvE server from any part of the world without being worried about the lag. Be nice against other players and dont be a smuck, be nice and enjoy the game. " />
+
+			</rect>		
+		</panel>     
+	</window>
+
+
+
+	
+	<window name="btnwebstoremenu" controller="NewsScreen" anchor="CenterTop" pos="-650,-420" justify="center" disableautobackground="true">
+		
+		
+		<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >
+			
+			<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
+			<rect name="btnwebstore" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://nastypve.eu/links/server3/webstore.xml">
+					
+					<!-- Line for the actual button you can change the color of it here -->
+					<button depth="10" name="btnLink" pos="-385,0" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="100,100,100,255" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" enabled="{has_link}" gamepad_selectable="{has_news}" />
+					
+					<!-- Just adds a border behind the button -->
+					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="150" fillcenter="true" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />				
+						
+						<!-- Text You Want On The Button -->
+						<label name="btntext" pos="-387,-30" color="245,206,51,255" depth="99" height="150" width="650" font_size="80" justify="center" text="WEBSTORE" />
+						<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="Exclusive ViP Passes" />
+			</rect>		
+		</panel>     
+	</window>
+
+
+
+	<window name="btndiscordmenu" controller="NewsScreen" anchor="CenterTop" pos="15,-420" justify="center" disableautobackground="true">
+		
+		
+		<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >
+			
+			<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
+			<rect name="btndiscord" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://nastypve.eu/links/server3/discord.xml">
+					
+					<!-- Line for the actual button you can change the color of it here -->
+					<button depth="10" name="btnLink" pos="-385,0" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="100,100,100,255" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" enabled="{has_link}" gamepad_selectable="{has_news}" />
+					
+					<!-- Just adds a border behind the button -->
+					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="150" fillcenter="true" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />				
+						
+						<!-- Text You Want On The Button -->
+						<label name="btntext" pos="-387,-30" color="245,206,51,255" depth="99" height="150" width="650" font_size="80" justify="center" text="DISCORD" />
+						<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="Join now with other 1.000 members" />
+			</rect>		
+		</panel>     
+	</window>
+
+		<window name="btnwebmapmenu" controller="NewsScreen" anchor="CenterTop" pos="-650,-585" justify="center" disableautobackground="true">
+		
+		
+		<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >
+			
+			<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
+			<rect name="btnwebmap" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://nastypve.eu/links/server3/onlinemap.xml">
+					
+					<!-- Line for the actual button you can change the color of it here -->
+					<button depth="10" name="btnLink" pos="-385,0" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="100,100,100,255" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" enabled="{has_link}" gamepad_selectable="{has_news}" />
+					
+					<!-- Just adds a border behind the button -->
+					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="150" fillcenter="true" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />				
+						
+						<!-- Text You Want On The Button -->
+						<label name="btntext" pos="-387,-30" color="245,206,51,255" depth="99" height="150" width="650" font_size="80" justify="center" text="ONLINE MAP" />
+						<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="Check out Traders locations and reset regions" />
+			</rect>		
+		</panel>     
+	</window>
+
+
+
+
+	<window name="btnvotemenu" controller="NewsScreen" anchor="CenterTop" pos="15,-585" justify="center" disableautobackground="true">
+		
+		
+		<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >
+			
+			<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
+			<rect name="btnvote" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://nastypve.eu/links/server3/vote.xml">
+					
+					<!-- Line for the actual button you can change the color of it here -->
+					<button depth="10" name="btnLink" pos="-385,0" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="100,100,100,255" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" enabled="{has_link}" gamepad_selectable="{has_news}" />
+					
+					<!-- Just adds a border behind the button -->
+					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="150" fillcenter="true" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />
+						
+						<!-- Required line -->
+						<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />				
+						
+						<!-- Text You Want On The Button -->
+						<label name="btntext" pos="-387,-30" color="245,206,51,255" depth="99" height="150" width="650" font_size="80" justify="center" text="VOTE FOR SERVER" />
+						<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="Vote for our server and redeem rewards" />
+			</rect>		
+		</panel>     
+	</window>
+	
+	</InsertBefore>
+
+</N.S.S>
