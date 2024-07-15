@@ -4,7 +4,7 @@
         <date>2024-07-14 12:00:00Z</date>
         <title>Online Map</title>
         <text>Online Map Link</text>
-        <link></link>
+        <link>http://172.93.105.221:26901/legacymap/index.html</link>
         <!--  put your link here  -->
         <imagerelpath/>
     </entry>
