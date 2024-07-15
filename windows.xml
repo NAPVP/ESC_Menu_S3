@@ -25,7 +25,7 @@
 		<window name="btnwebstoremenu" controller="NewsScreen" anchor="CenterTop" pos="-650,-420" justify="center" disableautobackground="true">
 			<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >
 				<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
-				<rect name="btnwebstore" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/WebstoreLink.xml">
+				<rect name="btnwebstore" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/ServerCommands.xml">
 					<!-- Line for the actual button you can change the color of it here -->
 					<button depth="10" name="btnLink" pos="-385,0" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="100,100,100,255" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" enabled="{has_link}" gamepad_selectable="{has_news}" />					
 					<!-- Just adds a border behind the button -->
@@ -35,8 +35,8 @@
 					<!-- Required line -->
 					<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />									
 					<!-- Text You Want On The Button -->
-					<label name="btntext" pos="-387,-30" color="139,0,0,255" depth="99" height="150" width="650" font_size="80" justify="center" text="WEBSTORE" />
-					<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="Coming soon.." />
+					<label name="btntext" pos="-387,-30" color="139,0,0,255" depth="99" height="150" width="650" font_size="80" justify="center" text="COMMANDS" />
+					<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="View available commands on the server" />
 				</rect>		
 			</panel>     
 		</window>
