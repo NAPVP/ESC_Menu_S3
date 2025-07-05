@@ -1,102 +1,47 @@
-<N.S.S>
-	
-	<!-- Clickable Link -->
-	<InsertBefore xpath="/windows/window[@name='chatoutput']">
-		<window name="nastytop" controller="NewsScreen" anchor="CenterTop" pos="-300,-150" justify="center" disableautobackground="true">
-			<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >
-				<rect name="btnwebstore" depth="10" pos="385,0" width="650" height="300" enabled_font_color="[labelColor]" controller="NewsWindow">
-					<!-- Just adds a border behind the button -->
-					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="250" fillcenter="true" />
-						
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />
-					
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />				
-					
-					<!-- Text You Want On The Button -->
-					<label name="btntext" pos="-387,-0" color="139,0,0,255" depth="99" height="150" width="650" font_size="80" justify="center" text="NORTH AMERICA PVP" />
-					<label name="btntext" pos="-387,-80" color="[white]" depth="99" height="150" width="650" font_size="25" justify="center" text="Welcome to the NAPVP 7 Days to Die Server" />
-					<label name="btntext" pos="-387,-110" color="[white]" depth="99" height="150" width="650" font_size="25" justify="center" text="KILL OR BE KILLED" />
-				</rect>		
-			</panel>     
-		</window>
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- Append custom simplebuttons with NAPVP styling to the existing ingameMenu window -->
+	<append xpath="/windows/window[@name='ingameMenu']">
+		<!-- Grid container for all custom simplebuttons - can be moved as a group -->
+		<rect name="custom_news_grid" anchor="CenterTop" pos="0,0" depth="3" width="1920" height="1080">
+			
+			<rect name="custom_menu_header" anchor="TopLeft" pos="600,-100" depth="1" width="650" height="300" controller="NewsWindow" sources="https://community.thefunpimps.com/">
+				<sprite depth="0" name="background" sprite="ui_game_header_fill" type="sliced" color="128,128,128,60" globalopacity="true" width="650" height="300" />
+				<button depth="10" name="btnLink" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="0,0,0,1" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" width="650" height="300" enabled="{has_link}" gamepad_selectable="{has_news}" />
+				<label depth="2" name="caption" pos="330,-50" width="650" height="300" font_size="80" text="NORTH AMERICA PVP" color="139,0,0,255" justify="center" pivot="center" />
+				<label depth="2" name="caption" pos="330,-100" width="650" height="300" font_size="24" text="NAPVP 7 Days to Die Server" color="207,177,60,255" justify="center" pivot="center" />
+				<label depth="2" name="caption" pos="330,-130" width="650" height="300" font_size="24" text="Clickable links below" color="207,177,60,255" justify="center" pivot="center" />
+			</rect>
 
-		<window name="btnwebstoremenu" controller="NewsScreen" anchor="CenterTop" pos="-650,-420" justify="center" disableautobackground="true">
-			<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >
-				<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
-				<rect name="btnwebstore" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/ServerCommands.xml">
-					<!-- Line for the actual button you can change the color of it here -->
-					<button depth="10" name="btnLink" pos="-385,0" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="100,100,100,255" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" enabled="{has_link}" gamepad_selectable="{has_news}" />					
-					<!-- Just adds a border behind the button -->
-					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="150" fillcenter="true" />
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />									
-					<!-- Text You Want On The Button -->
-					<label name="btntext" pos="-387,-30" color="139,0,0,255" depth="99" height="150" width="650" font_size="80" justify="center" text="COMMANDS" />
-					<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="View available commands on the server" />
-				</rect>		
-			</panel>     
-		</window>
+			<rect name="custom_btnwebstoremenu" anchor="TopLeft" pos="250,-450" depth="1" width="650" height="150" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/ServerCommands.xml">
+				<sprite depth="0" name="background" sprite="ui_game_header_fill" type="sliced" color="[darkGrey]" globalopacity="false" width="650" height="150" />
+				<button depth="10" name="btnLink" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="0,0,0,1" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" width="650" height="150" enabled="{has_link}" gamepad_selectable="{has_news}" />
+				<label depth="2" name="caption" pos="330,-65" width="650" height="150" font_size="80" text="COMMANDS" color="139,0,0,255" justify="center" pivot="center" />
+				<label depth="2" name="caption" pos="330,-115" width="650" height="150" font_size="28" text="Click To See The Commands List" color="207,177,60,255" justify="center" pivot="center" />
+			</rect>
 
-		<window name="btndiscordmenu" controller="NewsScreen" anchor="CenterTop" pos="15,-420" justify="center" disableautobackground="true">
-			<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >			
-				<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
-				<rect name="btndiscord" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/DiscordLink.xml">					
-					<!-- Line for the actual button you can change the color of it here -->
-					<button depth="10" name="btnLink" pos="-385,0" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="100,100,100,255" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" enabled="{has_link}" gamepad_selectable="{has_news}" />
-					<!-- Just adds a border behind the button -->
-					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="150" fillcenter="true" />
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />									
-					<!-- Text You Want On The Button -->
-					<label name="btntext" pos="-387,-30" color="139,0,0,255" depth="99" height="150" width="650" font_size="80" justify="center" text="DISCORD" />
-					<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="Join the NAPVP Discord Server" />
-				</rect>		
-			</panel>     
-		</window>
+			<rect name="custom_btndiscordmenu" anchor="TopLeft" pos="900,-450" depth="1" width="650" height="150" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/DiscordLink.xml">
+				<sprite depth="0" name="background" sprite="ui_game_header_fill" type="sliced" color="[darkGrey]" globalopacity="false" width="650" height="150" />
+				<button depth="10" name="btnLink" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="0,0,0,1" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" width="650" height="150" enabled="{has_link}" gamepad_selectable="{has_news}" />
+				<label depth="2" name="caption" pos="320,-65" width="650" height="150" font_size="80" text="DISCORD" color="139,0,0,255" justify="center" pivot="center" />
+				<label depth="2" name="caption" pos="320,-115" width="650" height="150" font_size="28" text="Click To See The NAPVP Discord" color="207,177,60,255" justify="center" pivot="center" />
+			</rect>
 
-		<window name="btnwebmapmenu" controller="NewsScreen" anchor="CenterTop" pos="-650,-585" justify="center" disableautobackground="true">
-			<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >	
-				<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
-				<rect name="btnwebmap" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/OnlineMap.xml">	
-					<!-- Line for the actual button you can change the color of it here -->
-					<button depth="10" name="btnLink" pos="-385,0" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="100,100,100,255" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" enabled="{has_link}" gamepad_selectable="{has_news}" />
-					<!-- Just adds a border behind the button -->
-					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="150" fillcenter="true" />	
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />							
-					<!-- Text You Want On The Button -->
-					<label name="btntext" pos="-387,-30" color="139,0,0,255" depth="99" height="150" width="650" font_size="80" justify="center" text="ONLINE MAP" />
-					<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="Check out Traders locations and reset regions" />
-				</rect>		
-			</panel>     
-		</window>
+			<rect name="custom_btnwebmapmenu" anchor="TopLeft" pos="250,-600" depth="1" width="650" height="150" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/OnlineMap.xml">
+				<sprite depth="0" name="background" sprite="ui_game_header_fill" type="sliced" color="[darkGrey]" globalopacity="false" width="650" height="150" />
+				<button depth="10" name="btnLink" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="0,0,0,1" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" width="650" height="150" enabled="{has_link}" gamepad_selectable="{has_news}" />
+				<label depth="2" name="caption" pos="320,-65" width="650" height="150" font_size="80" text="ONLINE MAP" color="139,0,0,255" justify="center" pivot="center" />
+				<label depth="2" name="caption" pos="320,-115" width="650" height="150" font_size="28" text="Click To See The Live Map" color="207,177,60,255" justify="center" pivot="center" />
 
-		<window name="btnvotemenu" controller="NewsScreen" anchor="CenterTop" pos="15,-585" justify="center" disableautobackground="true">
-			<panel name="header" pos="0,0" height="46" depth="3" bordercolor="[black]" borderthickness="50" >
-				<!-- IMPORTANT This is where the link to the file to read from goes. It MUST link to the CONTENTS of the file not simply the file itself --> <!-- also note link does not require @https  -->
-				<rect name="btnvote" depth="10" pos="385,0" width="650" height="150" enabled_font_color="[labelColor]" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/VoteLink.xml">
-					<!-- Line for the actual button you can change the color of it here -->
-					<button depth="10" name="btnLink" pos="-385,0" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="100,100,100,255" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" enabled="{has_link}" gamepad_selectable="{has_news}" />
-					<!-- Just adds a border behind the button -->
-					<sprite depth="9" name="sprBackgroundBorder" sprite="ui_game_header_fill" color="[darkGrey]" type="sliced" pos="-387,2" width="650" height="150" fillcenter="true" />
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelController" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueController" color="[white]" pivot="center" parse_actions="true" visible="{is_controller_input}" />						
-					<!-- Required line -->
-					<label depth="1" name="continueButtonLabelKeyboard" spacing_x="5" font_size="1" overflow="resizefreely" text_key="xuiNewsContinueKeyboard" color="[white]" upper_case="true" pivot="center" parse_actions="true" visible="{# !is_controller_input}" />					
-					<!-- Text You Want On The Button -->
-					<label name="btntext" pos="-387,-30" color="139,0,0,255" depth="99" height="150" width="650" font_size="80" justify="center" text="VOTE FOR SERVER" />
-					<label name="btntext" pos="-387,-100" color="[white]" depth="99" height="150" width="650" font_size="20" justify="center" text="Vote for our server" />
-				</rect>		
-			</panel>     
-		</window>
-	</InsertBefore>
+			</rect>
 
-</N.S.S>
+			<rect name="custom_btnvotemenu" anchor="TopLeft" pos="900,-600" depth="1" width="650" height="150" controller="NewsWindow" sources="https://raw.githubusercontent.com/NAPVP/ESC_Menu_S3/main/VoteLink.xml">
+				<sprite depth="0" name="background" sprite="ui_game_header_fill" type="sliced" color="[darkGrey]" globalopacity="false" width="650" height="150" />
+				<button depth="10" name="btnLink" style="hover,scroll,press" sprite="menu_empty" hoverscale="1" defaultcolor="0,0,0,1" disabledcolor="0,0,0,1" hovercolor="100,100,100,100" type="sliced" width="650" height="150" enabled="{has_link}" gamepad_selectable="{has_news}" />
+				<label depth="2" name="caption" pos="330,-65" width="650" height="150" font_size="80" text="VOTE FOR SERVER" color="139,0,0,255" justify="center" pivot="center" />
+				<label depth="2" name="caption" pos="330,-115" width="650" height="150" font_size="28" text="Click To Vote / Reward In Game After" color="207,177,60,255" justify="center" pivot="center" />
+			</rect>
+			
+		</rect>
+	</append>
+</config>
