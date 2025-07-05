@@ -1,11 +1,10 @@
-<N.S.S>
-    <script/>
-    <entry>
-        <date>2024-07-14 12:00:00Z</date>
-        <title>Server Commands</title>
-        <text>Server Commands Link</text>
-        <link>https://html-preview.github.io/?url=https://github.com/NAPVP/ESC_Menu_S3/blob/main/ServerCommands.html</link>
-        <!--  put your link here  -->
-        <imagerelpath/>
-    </entry>
-</N.S.S>
+<?xml version="1.0" encoding="UTF-8"?>
+<news>
+  <entry>
+    <headline>Server Commands</headline>
+    <headline2>NAPVP Command List</headline2>
+    <text>Complete list of available server commands and their descriptions.</text>
+    <url>https://html-preview.github.io/?url=https://github.com/NAPVP/ESC_Menu_S3/blob/main/ServerCommands.html</url>
+    <date>2024-07-14</date>
+  </entry>
+</news>
