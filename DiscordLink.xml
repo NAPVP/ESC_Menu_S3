@@ -1,11 +1,10 @@
-<N.S.S>
-    <script/>
-    <entry>
-        <date>2024-07-14 12:00:00Z</date>
-        <title>Discord</title>
-        <text>Discord Link</text>
-        <link>https://discord.gg/Jx8Cx3vCN9</link>
-        <!--  put your link here  -->
-        <imagerelpath/>
-    </entry>
-</N.S.S>
+<?xml version="1.0" encoding="UTF-8"?>
+<news>
+  <entry>
+    <headline>Discord</headline>
+    <headline2>NAPVP Community</headline2>
+    <text>Join the NAPVP Discord server for community chat and support.</text>
+    <url>https://discord.gg/Jx8Cx3vCN9</url>
+    <date>2024-07-14</date>
+  </entry>
+</news>
