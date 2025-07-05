@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <news>
   <entry>
-    <headline>Vote for Server</headline>
-    <headline2>Help NAPVP Grow</headline2>
+    <date>2024-07-14 12:00:00Z</date>
+    <title>Vote for Server</title>
     <text>Vote for the server to help us grow and get rewards! Use /reward in-game after voting.</text>
-    <url>https://7daystodie-servers.com/server/151092/vote/</url>
-    <date>2024-07-14</date>
+    <link>https://7daystodie-servers.com/server/151092/vote/</link>
+    <imagerelpath/>
   </entry>
 </news>

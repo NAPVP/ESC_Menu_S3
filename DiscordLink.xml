@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <news>
   <entry>
-    <headline>Discord</headline>
-    <headline2>NAPVP Community</headline2>
+    <date>2024-07-14 12:00:00Z</date>
+    <title>Discord</title>
     <text>Join the NAPVP Discord server for community chat and support.</text>
-    <url>https://discord.gg/Jx8Cx3vCN9</url>
-    <date>2024-07-14</date>
+    <link>https://discord.gg/Jx8Cx3vCN9</link>
+    <imagerelpath/>
   </entry>
 </news>
