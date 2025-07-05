@@ -1,11 +1,10 @@
-<N.S.S>
-    <script/>
-    <entry>
-        <date>2024-07-14 12:00:00Z</date>
-        <title>Online Map</title>
-        <text>Online Map Link</text>
-        <link>http://216.219.93.36:26904/legacymap/index.html</link>
-        <!--  put your link here  -->
-        <imagerelpath/>
-    </entry>
-</N.S.S>
+<?xml version="1.0" encoding="UTF-8"?>
+<news>
+  <entry>
+    <headline>Online Map</headline>
+    <headline2>Live Server Map</headline2>
+    <text>View the live server map showing player locations, claims, and points of interest.</text>
+    <url>http://216.219.93.36:26904/legacymap/index.html</url>
+    <date>2024-07-14</date>
+  </entry>
+</news>
